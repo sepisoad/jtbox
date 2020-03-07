@@ -1,22 +1,19 @@
 (use ../build/termbox)
 
 
-(var col 1)
+(defer (shutdown)
+	(init)	
+	
+	(def- row 20)
+	(def- msg "hello world")
+	
+	(cell 0 row 0x2591 white red)
 
-(init)
-(clear)
+	(for col 0 (length msg)
+		(cell (+ 1 col) row (msg col) black green))
 
-(cell 0 20 0x2591 white red)
+	(cell (+ 1 (length msg)) row 0x2591 white red)
 
-(each ch "hello world" 
-	(cell col 20 ch black green)
-	(set col (+ 1 col)))
-
-(cell 12 20 0x2591 white red)
-
-(present)
-(poll-event (event))
-(poll-event (event)) #WHY???
-
-
-(shutdown)
+	(present)
+	(poll-event (event))
+	(poll-event (event))) #WHY???
