@@ -26,7 +26,7 @@
   # :defines {"PLATFORM_DESKTOP" true}
 
   :source [# wrapper source
-           "src/main.c"
+           "src/mod.c"
 
            # raylib sources
            "termbox/src/termbox.c"
