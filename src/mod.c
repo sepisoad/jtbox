@@ -8,13 +8,7 @@
 
 static const JanetAbstractType tb_event_jt = {
     "event",
-    NULL,
-    NULL,
-    NULL,
-    NULL,
-    NULL,
-    NULL,
-    NULL
+    JANET_ATEND_NAME
 };
 
 /********************/
