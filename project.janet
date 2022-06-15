@@ -1,5 +1,7 @@
-( declare-project
+(declare-project
   :name "jtbox"
+  :description "Janet wrapper around termbox"
+  :url "https://github.com/sepisoad/jtbox"
   :author "Sepehr Aryani <sepehr.aryani@gmail.com>")
 
 (def os (os/which))
